@@ -16,11 +16,11 @@
   <meta content="Jump Cut Smoothing for Talking Heads" property="twitter:description" />
 
 
-    <!-- <meta property="og:image" content="assets/teaser.jpg">
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://powers-of-10.github.io/"/>
+    <!-- <meta property="og:image" content="assets/teaser.jpg"> -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://morphcut.github.io/"/>
 
-    <meta name="twitter:card" content="summary_large_image" />
+   <!--  <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="assets/teaser.jpg" /> -->
 
   <!-- Google tag (gtag.js) -->
@@ -104,11 +104,38 @@
     <div class="hero-body is-centered">
       <div class="columns is-centered">
         <div class="column is-centered is-full is-three-quarters-widescreen">
-        <video id="teaser" autoplay muted playsinline loop>
+          <table style='text-align:center' border="0">
+          <!-- <colgroup>
+              <col width="6%"><col width="6%">
+              <col width="6%"><col width="6%">
+              <col width="6%"><col width="6%">
+              <col width="6%"><col width="6%">
+              <col width="6%"><col width="6%">
+              <col width="6%"><col width="6%">
+          </colgroup> -->
+          <tr>
+          <td>
+            <video id="video" width="100%" controls>
+                   <source src="fillerwordsdemo/example1/input.mp4" type="video/mp4" />
+                   Your browser does not support the video element.
+               </video>   
+          </td>
+          <td style='text-align:center; vertical-align:middle'>
+            <img src="assets/arrow.png", width="80%"/>  
+          </td>
+          <td>
+            <video id="video" width="100%" controls>
+                   <source src="fillerwordsdemo/example1/smoothed.mp4" type="video/mp4" />
+                   Your browser does not support the video element.
+               </video>   
+          </td>
+        </tr>
+      </table>
+        <!-- <video id="teaser" autoplay muted playsinline loop>
           <source src="assets/teaser1.mp4" type="video/mp4">
-        </video>
+        </video> -->
           <h2 class="caption is-size-5 subtitle has-text-centered">
-           <b>TL;DR: </b> Given a talking head video, we remove the the filler words and repetitive words, and create a seamless transition for the jump cut.
+           <b>TL;DR: </b> Given a talking head video, we remove the the filler and repetitive words, smooth the resulting jump cut, and output a seamless video.
           </h2>
         </div>
       </div>
@@ -298,7 +325,7 @@ In the training stage, we randomly sample source (denoted in green rectangle) an
 <section id="demo" class="section">
   <div class="container is-max-widescreen">
     <h2 class="title is-2 is-centered has-text-centered">Baseline Comparisons</h2>
-    <div class=""> We show the video transition created by our method in comparison with the state-of-the-art frame interpolation method FILM in slow motion (see Fig. 8 in the main paper). We highlight the facial details in the rightmost column. Note that FILM has severe facial distortion especially when the head rotates from one side to another one.</div>
+    <div class=""> We show the video transition created by our method in comparison with the state-of-the-art frame interpolation method FILM in slow motion. We highlight the facial details in the rightmost column. Note that FILM has severe facial distortion especially when the head rotates from one side to another one.</div>
     <br>
     <table style='text-align:center' border="0">
       <colgroup>
@@ -432,7 +459,7 @@ In the training stage, we randomly sample source (denoted in green rectangle) an
     <h2 class="title is-2 is-centered has-text-centered">Attention Visualzations</h2>
 
     <div class="columns is-centered is-max-widescreen">
-      <div class=""> We highlight the correspondences learned by our attention mechanism with peak attention score >= 0.5 (see Fig. 3 in the main paper). </div>
+      <div class=""> We highlight the correspondences learned by our attention mechanism with peak attention score >= 0.5. </div>
     </div>
   <br>
   <table style='text-align:center' border="0">
